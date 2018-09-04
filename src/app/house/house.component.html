@@ -1,0 +1,11 @@
+<div class="container-fluid" *ngIf="currentHouse">
+  <h2 >{{currentHouse.name}} </h2>
+  <br>
+  <p *ngIf="currentHouse.coatOfArms">Coat of arms: {{currentHouse.coatOfArms}}</p>
+  <p *ngIf="currentHouse.currentLord">Current Lord: {{currentHouse.currentLord | uppercase}} </p>
+  <p *ngIf="currentHouse.foundedOn">Founded on: {{ currentHouse.foundedOn | date}} </p>
+  <p *ngIf="currentHouse.founder">Founder: {{currentHouse.founder}} </p>
+  <p *ngIf="currentHouse.heir">Heirs: {{currentHouse.heir}}</p>
+  <p *ngIf="currentHouse.region">Region: {{currentHouse.region}}</p>
+  <button class="btn btn-primary" (click)="goBack()" >Go back</button>
+</div>

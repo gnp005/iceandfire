@@ -1,0 +1,19 @@
+<h2>Characters</h2>
+  <br><br>
+  <div class="container-fluid">
+    <div class="row" *ngIf=" allCharacters.length > 0">
+      <div class="col" *ngFor="let character of allCharacters">
+        <div class="card" style="width: 18rem;height: 15rem;" >
+          <div class="card-body">
+            <h5 class="card-title"> {{ character.aliases }} </h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <!-- <a class="card-link">pages : {{.numberOfPages}}</a>
+            <a class="card-link">Author : {{book.authors}} </a> -->
+            <a class="btn btn-primary" [routerLink]="['/character',character.aliases]" >read</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>

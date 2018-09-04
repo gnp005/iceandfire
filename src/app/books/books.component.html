@@ -1,0 +1,19 @@
+<h2>Books</h2>
+  <br><br>
+
+  <div class="container-fluid">
+    <div class="row" *ngIf=" allBooks.length > 0">
+      <div class="col-sm-4 book" *ngFor="let book of allBooks">
+        <div class="card"  style="width: 18rem;height: 10rem;">
+          <div class="card-body">
+            <h5 class="card-title"> {{ book.name }} </h5>
+            <h6 class="card-subtitle mb-2 text-muted">Author : {{book.authors}} </h6>
+            <a class="card-link">Pages : {{book.numberOfPages}}</a>
+            <br>
+            <a class="btn btn-success" [routerLink]="['/book',book.name]" >Info</a>
+          </div>
+        </div>
+      </div><br>
+    </div>
+  </div>
+  <br><br>

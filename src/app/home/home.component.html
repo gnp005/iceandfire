@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row" *ngIf="allData !== {}">
+    <div class="col-md-4" *ngFor="let key of allDataKeys">
+      <div class="card" >
+          <div class="card-body" >
+            <h5 class="card-title"> {{key | uppercase}} </h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary" [routerLink]="['/',key]">Go to {{key}}</a>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

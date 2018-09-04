@@ -1,0 +1,11 @@
+<div class="container-fluid" *ngIf="currentBook">
+  <h2 *ngIf="currentBook.name">{{currentBook.name}} </h2>
+  <br>
+  <p *ngIf="currentBook.authors">Authors: {{currentBook.authors}}</p>
+  <p *ngIf="currentBook.publisher">Published by: {{currentBook.publisher}} </p>
+  <p *ngIf="currentBook.released">Released on: {{ currentBook.released | date}} </p>
+  <p *ngIf="currentBook.numberOfPages">Number of pages: {{currentBook.numberOfPages}} </p>
+  <p *ngIf="currentBook.mediaType">Media Type: {{currentBook.mediaType}}</p>
+  <p *ngIf="currentBook.country">Country: {{currentBook.country}}</p>
+  <button class="btn btn-primary" (click)="goBack()" >Go back</button>
+</div>
